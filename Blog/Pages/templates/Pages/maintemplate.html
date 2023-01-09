@@ -10,7 +10,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     {% block title %}
-    <title>Coder - Django Blog</title>
+    <title>Blog</title>
     {% endblock %}
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="Pages/assets/favicon.ico" />
@@ -21,7 +21,7 @@
     <!-- Responsive navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="{% url 'home' %}">Home</a>
+        <a class="navbar-brand" href="{% url 'home' %}">Inicio</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -37,22 +37,22 @@
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             {% if not request.user.is_authenticated %}
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'login' %}">Login</a>
+              <a class="nav-link" href="{% url 'login' %}">Iniciar Sesión</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'signup' %}">Sign up</a>
+              <a class="nav-link" href="{% url 'signup' %}">Crear cuenta</a>
             </li>
             {% endif %}
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'about' %}">About</a>
+              <a class="nav-link" href="{% url 'about' %}">Acerca de</a>
             </li>
             {% if request.user.is_authenticated %}
             <li class="nav-item">
               <a
                 class="nav-link active"
                 aria-current="page"
-                href="{% url 'messages_list' %}"
-                >Messages</a
+                href="{% url 'Principal' %}"
+                >Mensajes</a
               >
             </li>
             <li class="nav-item">

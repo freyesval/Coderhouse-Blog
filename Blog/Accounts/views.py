@@ -24,9 +24,9 @@ def login_form(request):
                 return redirect('home')
             else:
                 return render(
-                    request,"Accounts/login.html",{"login_form": login_form,"message": "Username or password incorrect"})
+                    request,"Accounts/login.html",{"login_form": login_form,"message": "Usuario o contraseña incorrectos"})
         else:
-            return render(request,"Accounts/login.html",{"login_form": login_form, "message": "Username or password incorrect"})
+            return render(request,"Accounts/login.html",{"login_form": login_form, "message": "Usuario o contraseña incorrectos"})
     else:
         login_form = AuthenticationForm()
         return render(request, "Accounts/login.html", {"login_form": login_form})
