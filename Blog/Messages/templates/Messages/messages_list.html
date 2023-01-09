@@ -1,0 +1,94 @@
+{% extends "Pages/maintemplate.html" %} {% load static %} 
+{% block title %}
+<title>Mensajes</title>
+{% endblock %}
+{% block header %}
+<div style="margin: 2em";></div>
+{% endblock%}
+{% block content %}
+<style>
+  .center {
+      border: 5px solid #fdfdfd;
+      display: flex;
+      justify-content: center;
+      }
+  body {
+      font-family: "Roboto", sans-serif;
+      font-size: 18px;
+      background-color: #fdfdfd;
+      text-align: center;
+      }
+
+  .head_text {
+      color: white;
+
+  }
+
+  .card {
+      box-shadow: 0 16px 48px #E3E7EB;
+      background-color: rgba(41, 33, 33, 0.048);
+      text-decoration-style: solid;
+      text-emphasis-color: red;
+  }
+
+  .avatar-img {
+    width: 200px;
+    height: 200px;
+  }
+  #HASH {
+  display: flex;
+  justify-content: space-between;
+  width: 180%;
+  
+}
+.msg-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.row {
+  padding: 0 20%;
+}
+
+.card {
+  margin: 0 auto;
+}
+</style> 
+<p style="text-decoration-color: #212529"><h1>Mensajes</h1></p>
+<div class="container">
+{% for message in messages %}
+  <div class="row">
+    {% for us in other_users %}
+      {% if us == message.receiver or us == message.sender  %}
+    <div class="card border-success mb-3">
+    <div class="card-body">
+      <p class="msg-header">
+          {% if us == message.receiver %}
+            To: 
+          {% elif us == message.sender %}
+            From: 
+          {% endif %}
+          {{ us }}
+        <span class="text-lg text-left font-semibold font-sans">
+          <small class=" justify-self-end  mr-4 mt-3 text-base  ">
+            <time datetime="2020-01-01">
+                Date: {{ message.date|date:"m/d/Y" }}
+            </time>
+          </small>
+        </span>
+      </p>
+      
+      <p class="card-text msg-content text-center font-medium text-slate-500 truncate">
+      {{ message.message }}
+      </p>
+      <a href="{% url 'inbox' us.username %}" class="btn btn-primary ">Ver mensaje</a>
+    </div>
+    </div>
+      {% endif %}
+{% endfor %}
+  </div>
+{% endfor %}
+</div>
+<div style="margin: 14em";></div>
+{% endblock %}

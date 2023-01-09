@@ -1,0 +1,67 @@
+{% extends "Pages/maintemplate.html" %} {% load static %} 
+{% block title %}
+<title>Mensajes</title>
+{% endblock %}
+{% block header %}
+<div style="margin: 3em";></div>
+{% endblock%}
+{% block content %}
+
+<style>
+  .center {
+      border: 5px solid #fdfdfd;
+      display: flex;
+      justify-content: center;
+      }
+  body {
+      font-family: "Roboto", sans-serif;
+      font-size: 18px;
+      background-color: #fdfdfd;
+      text-align: center;
+      }
+
+  .head_text {
+      color: white;
+
+  }
+
+  .card {
+      box-shadow: 0 16px 48px #E3E7EB;
+  }
+
+  .avatar-img {
+    width: 200px;
+    height: 200px;
+  }
+  #HASH {
+  display: flex;
+  justify-content: space-between;
+  width: 180%;
+  
+}
+.msg-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.row {
+  padding: 0 20%;
+}
+
+.card {
+  margin: 0 auto;
+}
+</style> 
+<p style="text-decoration-color: #0a76e2"><h1>Mensajes</h1></p>
+
+<div class="container">
+    <a class="btn btn-primary" href="{% url 'EnviarMensaje'  %}">Enviar nuevo mensaje</a>
+  <a class="btn btn-success"  href="{% url 'messages_list'  %}">Bandeja de Entrada</a>
+
+</div>
+
+
+</div>
+<div style="margin: 14em";></div>
+{% endblock %}

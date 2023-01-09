@@ -1,0 +1,44 @@
+ .center {
+      border: 5px solid #fdfdfd;
+      display: flex;
+      justify-content: center;
+      }
+  body {
+      font-family: "Roboto", sans-serif;
+      font-size: 18px;
+      background-color: #fdfdfd;
+      text-align: center;
+      }
+
+  .head_text {
+      color: white;
+
+  }
+
+  .card {
+      box-shadow: 0 16px 48px #E3E7EB;
+  }
+
+  .avatar-img {
+    width: 200px;
+    height: 200px;
+  }
+  #HASH {
+  display: flex;
+  justify-content: space-between;
+  width: 180%;
+  
+}
+.msg-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.row {
+  padding: 0 20%;
+}
+
+.card {
+  margin: 0 auto;
+}
