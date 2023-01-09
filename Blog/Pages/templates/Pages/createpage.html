@@ -1,0 +1,16 @@
+{% extends "Pages/maintemplate.html" %} {% load static %} 
+{% block title %}
+<title>Crear publicación</title>
+{% endblock %}
+{% block header %}
+<div style="margin: 5em";></div>
+{% endblock%}
+{% block content %}
+<div>
+<form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+    {{ form.media }}
+    {{ form.as_p }}
+    <input type="submit" name="Submit">
+</form>
+</div>
+{% endblock %}

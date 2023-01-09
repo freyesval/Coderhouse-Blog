@@ -1,0 +1,55 @@
+{% extends "Pages/maintemplate.html" %} {% load static %} {% block title %}
+<title>Edit Profile</title>
+{% endblock %} {% block header %}
+<div style="margin: 5em" ;></div>
+{% endblock%} {% block content %}
+<p>{{ user_form.errors }} {{ user_form.non_field_errors }}</p>
+<p>{{ form.errors }} {{ form.non_field_errors }}</p>
+<style>
+  .center {
+      border: 5px solid #fdfdfd;
+      display: flex;
+      justify-content: center;
+      }
+  body {
+      font-family: "Roboto", sans-serif;
+      font-size: 18px;
+      background-color: #fdfdfd;
+      text-align: center;
+      }
+
+  .head_text {
+      color: white;
+
+  }
+
+  .card {
+      box-shadow: 0 16px 48px #E3E7EB;
+  }
+
+</style>
+<div class="container">
+  <div class="row">
+      <div class="center">
+        <div class="card mb-4">
+          <div class="card-body">
+            <form
+            action="{% url 'editprofile' profile_id  %}"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            {% csrf_token %}
+            <table>
+
+            {{ user_form.as_table }} {{ form.as_table }}
+            </table>
+            <div style="margin: 3em" ;></div>
+          
+             <input type="submit" class="btn btn-primary">
+            </form>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock%}

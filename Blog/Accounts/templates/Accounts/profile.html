@@ -1,0 +1,54 @@
+{% extends "Pages/maintemplate.html" %} {% load static %} {% block title %}
+<title>Profile</title>
+{% endblock %} {% block header %}
+<div style="margin: 5em" ;></div>
+{% endblock%} {% block content %}
+<style>
+  .center {
+      border: 5px solid #fdfdfd;
+      display: flex;
+      justify-content: center;
+      }
+  body {
+      font-family: "Roboto", sans-serif;
+      font-size: 18px;
+      background-color: #fdfdfd;
+      text-align: center;
+      }
+
+  .head_text {
+      color: white;
+
+  }
+
+  .card {
+      box-shadow: 0 16px 48px #E3E7EB;
+  }
+
+  .avatar-img {
+    width: 200px;
+    height: 200px;
+  }
+</style>
+<div class="container">
+  <div class="row">
+      <div class="center">
+        <div class="card mb-4">
+          <div class="card-body">
+        <h1> {{ user.username }}</h1>
+
+          <p class="card-img-top"> <img class="avatar-img" src="{{ profile.image.url }}" alt=""></p>
+
+          <p>{{ user.first_name }} {{ user.last_name }}</p>
+          <p>{{ user.email }}</p>
+          <p>Description: {{ profile.description }}</p>
+          <p>Link: {{ profile.link }}</p>
+          <a href="{% url 'editprofile' profile.id %}" class="btn btn-primary">Edit Profile</a>
+          <a href="{% url 'logout' %}" class="btn btn-primary">Sign out</a>
+          <a href="{% url 'deleteaccount' user.id %}" class="btn btn-primary">Delete Account</a>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock%}
