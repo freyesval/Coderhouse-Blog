@@ -14,6 +14,10 @@ Para instalar Pillow en el terminal:
 Para instalar ckeditor en el terminal:
 • pip install django-ckeditor
 
+# NO OLVIDAR UTILIZAR LOS SIGUIENTES COMANDOS PARA QUE FUNCIONE CORRECTAMENTE EL PROYECTO!
+• python manage.py makemigrations
+• python manage.py migrate
+
 ## Trabajo en conjunto
 
 Para el proyecto, nos dividimos de la siguiente manera:
