@@ -65,6 +65,11 @@ Si apretamos el texto con el nombre de usuario, se nos abrirá una ventana con l
 
 
 
+## Link del video tutorial 
+https://drive.google.com/file/d/1zw3d_Dz-sJLHF16N7dK-jqgzuZgc2yqP/view?usp=sharing
+
+
+
 
 
 
