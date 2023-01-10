@@ -12,13 +12,13 @@
     <div class="row">
       <div class="col-md-8 card mb-4  mt-3 left  top">
         <div class="card-body">
-          <p class="center"> <img src="{{ p.image.url }}" alt="" style="width: 100%;
+          <p class="center"> <img src="{{ p.imagen.url }}" alt="" style="width: 100%;
             height: 400px;"></p>
           <p class=" text-muted">{{ p.author }} | {{ p.date }}</p>
           <p class="card-text ">{{ p.html_content }}</p>
         </div>
-        <a href="{% url 'editpage' p.slug %}" class="btn btn-primary">Edit Page</a>
-        <a href="{% url 'deletepage' p.slug %}" class="btn btn-primary">Delete Page</a>
+        <a href="{% url 'editpage' p.etiqueta %}" class="btn btn-primary">Edit Page</a>
+        <a href="{% url 'deletepage' p.etiqueta %}" class="btn btn-primary">Delete Page</a>
       </div>
     </div>
   </div>
