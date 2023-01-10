@@ -94,9 +94,9 @@ def editprofile(request, profile_id):
             data = form.cleaned_data
             user_data = user_form.cleaned_data
 
-            edit_profile.user.first_name = user_data["first_name"]
-            edit_profile.user.last_name = user_data["last_name"]
-            edit_profile.user.email = user_data["email"]
+            edit_profile.user.nombre = user_data["nombre"]
+            edit_profile.user.apellido = user_data["apellido"]
+            edit_profile.user.correo = user_data["correo"]
             edit_profile.user.save()
 
             edit_profile.description = data["description"]
