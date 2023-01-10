@@ -7,9 +7,9 @@ from django.views.generic.list import ListView
 class CreateForm(forms.ModelForm):
     class Meta:
         model = Pages
-        fields = ['title', 'subtitle', 'content', 'author','image', 'slug', 'status']
+        fields = ['titulo', 'subtitulo', 'contenido', 'autor','imagen', 'etiqueta', 'estado']
 
 class PageEditForm(forms.ModelForm):
     class Meta:
         model = Pages
-        fields = ['title', 'subtitle', 'content','image']
+        fields = ['titulo', 'subtitulo', 'contenido','imagen']
