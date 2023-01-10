@@ -2,3 +2,4 @@
 .venv/
 *.pyc
 Blog/db.sqlite3
+*.sqlite3
