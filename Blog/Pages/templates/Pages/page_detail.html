@@ -14,11 +14,11 @@
         <div class="card-body">
           <p class="center"> <img src="{{ p.imagen.url }}" alt="" style="width: 100%;
             height: 400px;"></p>
-          <p class=" text-muted">{{ p.author }} | {{ p.date }}</p>
+          <p class=" text-muted">{{ p.autor }} | {{ p.fecha }}</p>
           <p class="card-text ">{{ p.html_content }}</p>
         </div>
-        <a href="{% url 'editpage' p.etiqueta %}" class="btn btn-primary">Edit Page</a>
-        <a href="{% url 'deletepage' p.etiqueta %}" class="btn btn-primary">Delete Page</a>
+        <a href="{% url 'editpage' p.etiqueta %}" class="btn btn-primary">Editar entrada</a>
+        <a href="{% url 'deletepage' p.etiqueta %}" class="btn btn-primary">Eliminar entrada</a>
       </div>
     </div>
   </div>
