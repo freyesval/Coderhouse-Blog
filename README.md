@@ -1,4 +1,4 @@
-# proyectofinalCoderhouseFRJO
+# Coderhouse: Blog
 
 ## Integrantes
 * Jorge Obando
